@@ -1,0 +1,48 @@
+.badge {
+  align-items: center;
+  border: 1px solid $white;
+  border-radius: 99rem;
+  color: $white;
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-transform: uppercase;
+  width: fit-content;
+
+  &__text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  &__icon {
+    flex-shrink: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+
+    @include respond-to("sm") {
+      height: 1.75rem;
+      width: 1.75rem;
+    }
+
+    img {
+      height: 100%;
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+
+  &--large {
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+.white-badge {
+  border-radius: 99rem;
+  background-color: $white;
+  color: $gray-950;
+  padding: 1.5rem 1rem;
+  padding-left: 1.5rem;
+  
+}

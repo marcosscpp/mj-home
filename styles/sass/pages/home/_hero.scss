@@ -1,0 +1,181 @@
+.hero {
+  background-color: $gray-900;
+  border-bottom: 2px solid rgba($white, 0.25);
+
+  &__container {
+    display: flex;
+    gap: 2.5rem;
+
+    @include respond-to("xl", $type: "max") {
+      align-items: center;
+    }
+
+    @include respond-to("lg", $type: "min") {
+      margin-left: auto;
+      max-width: 92rem;
+      min-height: 100vh;
+      padding-right: 4rem;
+    }
+
+    @include respond-to("lg") {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include respond-to("lg", $type: "min") {
+      padding-bottom: 3rem;
+      padding-top: 6rem;
+    }
+
+    @include respond-to("lg") {
+      align-items: center;
+      max-width: 54rem;
+      padding: 2rem 3rem 0;
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    max-width: 22rem;
+
+    @include respond-to("xxl") {
+      max-width: 18rem;
+    }
+
+    @include respond-to("sm") {
+      max-width: 14rem;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    strong {
+      font-weight: 900;
+    }
+  }
+
+  &__description {
+    @include respond-to("lg", $type: "min") {
+      max-width: 44rem;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem 1.25rem;
+
+    @include respond-to("lg") {
+      justify-content: center;
+    }
+  }
+
+  &__button {
+    margin-top: 0;
+  }
+
+  &__arrow {
+    align-items: center;
+    border: 0.125rem solid $white;
+    border-radius: 99rem;
+    cursor: pointer;
+    display: flex;
+    height: 2.5rem;
+    justify-content: center;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+    width: 2rem;
+
+    @include respond-to("lg", $type: "min") {
+      margin-top: 4rem;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: rgba($white, 0.25);
+    }
+  }
+
+  &__slider {
+    display: flex;
+    gap: 1.25rem;
+    max-width: 38rem;
+    position: relative;
+
+    @include respond-to("lg", $type: "min") {
+      max-height: 60rem;
+    }
+
+    @include respond-to("lg") {
+      flex-direction: column;
+      height: 50vh;
+      max-width: 50rem;
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 1.25rem;
+    }
+
+    .swiper {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__swiper {
+    &::before {
+      border: 1px solid $white;
+      content: "";
+      inset: 1rem;
+      pointer-events: none;
+      position: absolute;
+      z-index: 2;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+
+  &__slider-pagination {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    justify-content: center;
+
+    @include respond-to("lg") {
+      flex-direction: row;
+    }
+
+    .swiper-pagination-bullet {
+      border: 1px solid $white;
+      border-radius: 50%;
+      cursor: pointer;
+      height: 0.75rem;
+      transition: all 0.3s ease;
+      width: 0.75rem;
+      flex-shrink: 0;
+
+      &:hover {
+        background: rgba($white, 0.5);
+      }
+
+      &.swiper-pagination-bullet-active {
+        background: $white;
+      }
+    }
+  }
+}

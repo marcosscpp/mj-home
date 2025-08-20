@@ -1,0 +1,13 @@
+.bg-metallic {
+  background-image: url("#{$background-path}/metallic-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: $white;
+}
+
+.bg-gray {
+  background-color: $gray-100;
+  color: $gray-950;
+}
