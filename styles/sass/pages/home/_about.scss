@@ -23,5 +23,29 @@
   }
 
   &__image {
+    max-width: 32rem;
+  }
+
+  &__logo {
+    max-width: 13rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: -2.5rem;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__image > img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    display: block;
   }
 }

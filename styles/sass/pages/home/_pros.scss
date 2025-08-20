@@ -6,14 +6,15 @@
     gap: 2.5rem;
   }
 
-  &__title {
-  }
-
   &__grid {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+
+    @include respond-to("sm") {
+      flex-direction: column;
+    }
   }
 
   &__card {
@@ -23,37 +24,25 @@
     border-radius: 1rem;
     color: $white;
     display: flex;
-    flex: 1 1 16rem;
+    flex: 1 1 13.5rem;
     flex-direction: column;
     gap: 1.25rem;
-    max-width: 17rem;
-    min-height: 14rem;
+    @include respond-to("sm", $type: "min") {
+      max-width: 14.5rem;
+    }
+    min-height: 12.5rem;
     padding: 1.25rem;
     position: relative;
-
-    &::before {
-      background-image: url("#{$background-path}/metallic-bg.jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      border-radius: inherit;
-      content: "";
-      inset: 0;
-      opacity: 0.5;
-      position: absolute;
-      z-index: 0;
-    }
-
-    & > * {
-      position: relative;
-      z-index: 1;
-    }
   }
 
   &__icon {
-    filter: brightness(0) invert(1);
     height: 2.5rem;
     width: 2.5rem;
+
+    @include respond-to("sm") {
+      height: 3.5rem;
+      width: 3.5rem;
+    }
 
     img {
       height: 100%;
@@ -66,10 +55,15 @@
     background-color: $white;
     height: 0.125rem;
     opacity: 0.5;
-    width: 2.5rem;
+    width: 20%;
   }
 
   &__text {
+    font-size: 1.25rem;
+    @include respond-to("sm") {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
   }
 
   &__button {

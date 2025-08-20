@@ -1,0 +1,78 @@
+.testimonials {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 54rem;
+  }
+
+  &__card {
+    align-items: center;
+    background: $white;
+    border-radius: 99rem;
+    color: $gray-950;
+    display: flex;
+    gap: 1rem 2rem;
+    padding: 0.75rem 3rem 0.75rem 0.75rem;
+
+    @include respond-to("md") {
+      padding: 2rem;
+      border-radius: 1rem;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  &__avatar {
+    flex-shrink: 0;
+    position: relative;
+    width: 6.5rem;
+    height: 6.5rem;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url("#{$icon-path}/blue-check.png") center/contain no-repeat;
+      z-index: 9;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+
+    @include respond-to("md") {
+      span {
+        display: none;
+      }
+
+      strong {
+        margin-top: 0.5rem;
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.faq {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+
+    @include respond-to("md", $type: "min") {
+      max-width: 54rem;
+    }
+  }
+
+  &__item {
+    background-color: $white;
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem;
+    text-align: left;
+    color: $gray-950;
+  }
+
+  &__question {
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__answer {
+    font-weight: 500;
+    font-size: 1.125rem;
+  }
+
+  &__button {
+    margin-top: 1.5rem;
+  }
+}

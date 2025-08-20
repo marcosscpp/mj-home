@@ -1,0 +1,56 @@
+.event {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+
+    @include respond-to("md", $type: "min") {
+      max-width: 53rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+
+    @include respond-to("md", $type: "min") {
+      max-width: 45rem;
+    }
+  }
+
+  &__badges {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  &__badge {
+    border-color: $gray-950;
+    color: $gray-950;
+    width: 100%;
+
+    .badge__icon {
+      img {
+        filter: brightness(0) saturate(100%);
+      }
+    }
+  }
+
+  &__image {
+    margin-top: 1rem;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      display: block;
+    }
+  }
+
+  &__button {
+    margin-top: 1.5rem;
+  }
+}
